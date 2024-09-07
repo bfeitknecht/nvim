@@ -7,9 +7,8 @@ function map(mode, lhs, rhs, opts)
 end
 
 -- general
-map("n", "<C-q>", "<cmd>q!<CR>", { desc = "Quit without save" })
-map("n", "<C-s>", "<cmd>w<CR>", { desc = "Save current buffer" })
-
+map({ "n", "i" }, "<C-q>", "<cmd>q!<CR>", { desc = "Quit without save" })
+map({ "n", "i" }, "<C-s>", "<cmd>w<CR><ESC>", { desc = "Save current buffer" })
 
 -- movement
 map("n", "<C-h>", "<C-w>h", { desc = "Switch Window left" })
@@ -45,11 +44,11 @@ map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Nvimtree Focus window"
 -- map("n", "<leader>u", )
 
 -- whichkey
-map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "Whichkey all keymaps" })
+map("n", "<leader>wK", "<cmd>WhichKey<CR>", { desc = "Whichkey all keymaps" })
 
 
 -- lazy
-map("n", "<leader>L", "<cmd>Lazy <CR>", { desc = "Lazy Open Dashboard" })
+map("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Lazy Open Dashboard" })
 
 -- telescope
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "Telescope Live grep" })
